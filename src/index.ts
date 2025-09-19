@@ -11,8 +11,7 @@ dotenv.config()
 const startServer = async () => {
   const app: Application = express()
   //   mongodb
-  const uri =
-    'mongodb+srv://devsajjadhosan1:4QD1mXEKtf84UuQa@mydbv001.jmnjuqq.mongodb.net/?retryWrites=true&w=majority&appName=MyDBv001'
+  const uri = `mongodb+srv://${process.env.ME_US}:${process.env.MG_SE}.jmnjuqq.mongodb.net/?retryWrites=true&w=majority&appName=MyDBv001`
   await mongoose.connect(uri)
   console.log('MongoDB Connected!')
 
